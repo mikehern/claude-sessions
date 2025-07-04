@@ -9,7 +9,7 @@ End the current development session by:
      * List all completed tasks
      * List any incomplete tasks with status
    - Key accomplishments
-   - Clarifying and exploratory questions asked
+   - Clarifying and exploratory questions asked, along with any options and tradeoffs expressed
    - Decisions made with any reasoning if provided
    - All features implemented
    - Problems encountered and solutions
