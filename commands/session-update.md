@@ -8,8 +8,7 @@ Update the current development session by:
    - Todo list status:
      * Number of completed/in-progress/pending tasks
      * List any newly completed tasks
-   - Clarifying and exploratory questions asked
-   - Responses and tradeoffs related to questions
+   - Clarifying and exploratory questions asked, along with any options and tradeoffs expressed
    - Decisions made with any reasoning if provided
    - Any issues encountered
    - Solutions implemented
