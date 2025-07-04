@@ -3,7 +3,7 @@ Start a new development session by creating a session file in `.claude/sessions/
 The session file should begin with:
 1. Session name and timestamp as the title
 2. Session overview section with start time
-3. Goals section (ask user for goals if not clear)
+3. Empty goals section ready for updates
 4. Empty progress section ready for updates
 
 After creating the file, create or update `.claude/sessions/.current-session` to track the active session filename.
@@ -11,3 +11,6 @@ After creating the file, create or update `.claude/sessions/.current-session` to
 Confirm the session has started and remind the user they can:
 - Update it with `/project:session-update`
 - End it with `/project:session-end`
+
+Lastly:
+- Ask the user for their goals
