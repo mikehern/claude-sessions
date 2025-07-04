@@ -2,12 +2,14 @@
 
 Custom slash commands for Claude Code that provide comprehensive development session tracking and documentation. Based on [Claude Code's custom slash command system](https://docs.anthropic.com/en/docs/claude-code/slash-commands).
 
+This version removes git (until an automated git-workflow is identified). An iterative, product management flow is included by prompting for exploratory/research, options and their respective tradeoffs, and decisions made during a session.
+
 ## 🎯 Overview
 
 This is a set of custom slash commands for Claude Code that helps developers maintain continuity across multiple coding sessions with Claude by:
 
 - **Documenting Progress**: Capture what was done, how it was done, and why decisions were made
-- **Tracking Changes**: Monitor git changes, todo items, and implementation details  
+- **Tracking Changes**: Todo items, and implementation details  
 - **Knowledge Transfer**: Enable future sessions to understand past work without re-analyzing the entire codebase
 - **Issue Resolution**: Document problems encountered and their solutions for future reference
 
@@ -57,7 +59,7 @@ sessions/                      # Session storage directory
 
 1. Clone this repository or copy the folders to your project:
    ```bash
-   git clone git@github.com:iannuttall/claude-sessions.git
+   git clone git@github.com:mikehern/claude-sessions.git
    # Or copy the commands and sessions folders to your project root
    ```
 
@@ -112,7 +114,7 @@ Adds timestamped updates to the current session.
 
 **What it does:**
 - Appends progress notes with timestamp
-- Captures git status and changes
+- Adds product management context during exploration and decision-making
 - Tracks todo list progress
 - Documents issues and solutions
 - Records implementation details
@@ -133,7 +135,7 @@ Ends the current session with a comprehensive summary.
 **What it does:**
 - Generates complete session summary including:
   - Duration and timing
-  - Git changes summary
+  - Adds product management context during exploration and decision-making
   - Todo items completed/remaining
   - Key accomplishments
   - Problems and solutions
@@ -260,7 +262,7 @@ If you want to use these with Claude Code's standard directory structure:
 ## 🔍 Tips and Tricks
 
 1. **Searchable Sessions**: Use consistent terminology in updates for easy searching
-2. **Link Issues**: Reference ticket numbers or GitHub issues in updates
+2. ~~**Link Issues**: Reference ticket numbers or GitHub issues in updates~~ (Pending until automated git workflow identified)
 3. **Code Snippets**: Include important code changes in session updates
 4. **Screenshots**: Reference screenshot paths for UI changes
 5. **Testing Notes**: Document test scenarios and results
@@ -272,7 +274,6 @@ Edit the command files in `commands/` to:
 - Change session file format
 - Add custom sections
 - Modify summary generation
-- Adjust git tracking details
 
 ### Session Storage
 - Default: `sessions/`
@@ -289,9 +290,6 @@ Edit the command files in `commands/` to:
 - Ensure a session is active
 - Check file permissions in `sessions/`
 
-**Missing git information**
-- Verify you're in a git repository
-- Check git is properly initialized
 
 ## 📚 Examples
 
